@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pixcompress"
+version = "0.1.0"
+description = "Simple image compression tool"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name="Ruskaruma", email="ruskaruma.gg@gmail.com"}]
+license = "MIT"
+dependencies = ["Pillow>=9.0", "click>=8.0"]
+
+[project.scripts]
+pixcompress = "pixcompress.cli:cli"
