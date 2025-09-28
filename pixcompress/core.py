@@ -83,7 +83,7 @@ def compress(src: str,
                 img.save(dst_p, format="PNG", optimize=optimize)
 
         else:
-            # fallback: try saving in current format, else copy
+            #fallback: try saving in current format, else copy
             try:
                 img.save(dst_p)
             except Exception:
@@ -93,7 +93,7 @@ def compress(src: str,
     return {"src": str(src_p), "dst": str(dst_p), "orig_size": orig_size, "new_size": new_size}
 
 
-# small batch helper
+#small batch helper
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 def compress_batch(paths, out_dir: str, workers: int = 4, **kwargs):
