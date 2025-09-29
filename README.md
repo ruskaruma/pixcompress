@@ -5,7 +5,7 @@ Simple image compression tool that creates compressed copies while keeping origi
 ## Install
 
 ```bash
-pip install pixcompress-tool
+pip install pixcompress
 ```
 
 ## Usage
