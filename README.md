@@ -1,11 +1,41 @@
 # pixcompress
 
-Simple image compression tool that creates compressed copies while keeping originals intact.
+## Simple image compression tool that creates compressed copies while keeping originals intact.
+
+Effortlessly compress images with pixcompres an easy, fast, and reliable tool for shrinking JPEG, PNG, and GIF files while preserving quality.
+
+## key Points
+* Fast compression for JPEG, PNG, and GIF images
+
+* Maintains image quality while reducing file size
+
+* Batch processing: compress multiple files at once
+
+* Provides clear error messages for common issues
+
+* Easy command-line and Python API usage
+
+* Suited for web, mobile, and personal projects
+
+* Open source and customizable
+
+
 
 ## Install
+install using pip(Python Package Manager):
 
 ```bash
+# Using pip
 pip install pixcompress
+```
+
+Or clone the repo and install locally:
+
+```bash
+git clone https://github.com/ruskaruma/pixcompress.git
+cd pixcompress
+pip install .
+
 ```
 
 
@@ -16,20 +46,8 @@ Compress any image file:
 ```bash
 pixcompress photo.jpg
 #Creates: photo_compressed.jpg
-
-pixcompress image.png --quality 70
-#Creates: image_compressed.png with 70% quality
-
-pixcompress large.jpg --max-width 1920 --max-height 1080
-#Resizes and compresses to max 1920x1080
-
-pixcompress photo.jpg --output compressed_photo.jpg
-#Custom output filename
 ```
-
-## Usage Examples
-
-### Example 1: Compress a Single JPG Image (Default Quality)
+### Example: Compress a Single JPG Image (Default Quality)
 
 Command:
 ```bash
@@ -39,10 +57,21 @@ pixcompress sample.jpg
 
 Output:
 - Creates: `sample_compressed.jpg`
-- Original file size: approx. 2.5MB
-- Compressed file size: approx. 1.2MB
+- Original file size: approx.977 KB
+- Compressed file size: approx. 307 kB
+- (63.0% reduction)
 
-### Example 2: Compress a PNG Image with Custom Quality
+| Original Image | Compressed Image |
+| -------------- | ---------------- |
+| ![Original](pixcompress/images/Scanned_20251001_110320_page-0001.jpg) | ![Compressed](pixcompress/images/Scanned_20251001_110320_page-0001_compressed.jpg) |
+
+ 
+
+```bash
+pixcompress image.png --quality 70
+#Creates: image_compressed.png with 70% quality
+```
+### Example: Compress a PNG Image with Custom Quality
 
 Command:
 ```bash
@@ -55,11 +84,22 @@ Output:
 - Original file size: approx. 500KB
 - Compressed file size: approx. 300KB
 
-### Example 3: Resize and Compress an Image
+
+| Original Image                | Compressed Image              |
+|------------------------------|------------------------------|
+| ![Original]() | ![Compressed]() |
+
+
+```bash
+pixcompress large.jpg --max-width 1920 --max-height 1080
+#Resizes and compresses to max 1920x1080
+```
+### Example: Resize and Compress an Image
 
 Command:
 ```bash
 pixcompress banner.jpg --max-width 1920 --max-height 1080
+# Resize and compress an image to max dimensions 1920x1080
 ```
 
 
@@ -68,7 +108,17 @@ Output:
 - Original file size: approx. 5MB
 - Compressed file size: approx. 2MB
 
-### Example 4: Compress and Specify Custom Output Filename
+| Original Image                | Compressed Image              |
+|------------------------------|------------------------------|
+| ![Original]() | ![Compressed]() |
+
+
+```bash
+pixcompress photo.jpg --output compressed_photo.jpg
+#Custom output filename
+```
+
+### Example: Compress and Specify Custom Output Filename
 
 Command:
 ```bash
@@ -81,23 +131,36 @@ Output:
 - Original file size: approx. 3MB
 - Compressed file size: approx. 1.5MB
 
-### Example 5: Batch Compress (Planned Feature for future)
 
-Command:
-```bash
-pixcompress folder/*.jpg
-```
+| Original Image                | Compressed Image              |
+|------------------------------|------------------------------|
+| ![Original]() | ![Compressed]() |
 
 
-Output:
-- Compresses all JPG images in the folder
 
-## Common Use Cases
 
-- Preparing images for faster loading on social media or websites
-- Reducing storage space while maintaining image quality
-- Resizing photos for emailing or sharing
-- Optimizing images for e-commerce and cloud applications
+## Common Use Cases (FAQ)
+
+**Q: Why compress images with pixcompress?**  
+A: Reduce file sizes to speed up websites and apps without losing quality.
+
+**Q: Can I compress multiple images at once?**  
+A: Yes, batch processing lets you optimize entire folders quickly.
+
+**Q: Does it resize images too?**  
+A: You can set max width and height to resize before compressing.
+
+**Q: Which image formats are supported?**  
+A: JPEG, PNG, and GIF.
+
+**Q: What if I try to compress a corrupted or unsupported file?**  
+A: pixcompress shows clear error messages to help you fix it.
+
+**Q: Can I use pixcompress in my automation workflows?**  
+A: Absolutely—you can run commands in scripts or use the Python API.
+
+**Q: Is it good for personal photo collections?**  
+A: Yes, it’s great for saving disk space on your computer or cloud.
 
 ## Options
 
